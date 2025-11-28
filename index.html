@@ -3,31 +3,74 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Unbothered Arena</title>
+    <title>Unbothered Arena | Sanctuary for the Senses</title>
+    <meta
+      name="description"
+      content="Escape the noise. Unbothered Arena offers high-end, minimalist sanctuaries designed for psychological calm and sensory restoration. Your retreat awaits."
+    />
+    <meta
+      name="keywords"
+      content="luxury rentals, minimalist design, sensory calm, psychological escape, architecture, unbothered, sanctuary, slow living"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://unbothered-arena.com/" />
+    <meta
+      property="og:title"
+      content="Unbothered Arena | Sanctuary for the Senses"
+    />
+    <meta
+      property="og:description"
+      content="Escape the noise. Unbothered Arena offers high-end, minimalist sanctuaries designed for psychological calm and sensory restoration."
+    />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&q=80&w=1200"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://unbothered-arena.com/" />
+    <meta
+      property="twitter:title"
+      content="Unbothered Arena | Sanctuary for the Senses"
+    />
+    <meta
+      property="twitter:description"
+      content="Escape the noise. Unbothered Arena offers high-end, minimalist sanctuaries designed for psychological calm and sensory restoration."
+    />
+    <meta
+      property="twitter:image"
+      content="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&q=80&w=1200"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
-              'oat-milk': '#F7F4EB',
-              'soft-charcoal': '#292D32',
-              'terracotta': '#C97D60',
-              'night-sky': '#1a1c20',
+              "oat-milk": "#F7F4EB",
+              "soft-charcoal": "#292D32",
+              terracotta: "#C97D60",
+              "night-sky": "#1a1c20",
             },
             fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-              serif: ['Lora', 'serif'],
+              sans: ["Inter", "sans-serif"],
+              serif: ["Lora", "serif"],
             },
             backgroundImage: {
-              'noise': "url('https://grainy-gradients.vercel.app/noise.svg')",
-            }
+              noise: "url('https://grainy-gradients.vercel.app/noise.svg')",
+            },
           },
         },
-      }
+      };
     </script>
     <style>
       /* Hide default cursor */
@@ -44,31 +87,33 @@
         width: 8px;
       }
       ::-webkit-scrollbar-track {
-        background: #F7F4EB;
+        background: #f7f4eb;
       }
       ::-webkit-scrollbar-thumb {
-        background: #D1D5DB;
+        background: #d1d5db;
         border-radius: 4px;
       }
       ::-webkit-scrollbar-thumb:hover {
-        background: #C97D60;
+        background: #c97d60;
       }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
-  <body class="bg-oat-milk text-soft-charcoal antialiased selection:bg-terracotta selection:text-white">
+    <script type="importmap">
+      {
+        "imports": {
+          "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+          "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+          "react/": "https://aistudiocdn.com/react@^19.2.0/",
+          "react": "https://aistudiocdn.com/react@^19.2.0",
+          "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24"
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body
+    class="bg-oat-milk text-soft-charcoal antialiased selection:bg-terracotta selection:text-white"
+  >
     <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
-</body>
+    <script type="module" src="/index.tsx"></script>
+  </body>
 </html>
