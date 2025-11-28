@@ -14,7 +14,7 @@ const properties: Property[] = [
         'https://picsum.photos/seed/loft2/1200/800',
         'https://picsum.photos/seed/loft3/1200/800'
     ],
-    price: '$240/night',
+    price: 'N240/night',
     guests: 2
   },
   {
@@ -27,7 +27,7 @@ const properties: Property[] = [
         'https://picsum.photos/seed/oat2/1200/800',
         'https://picsum.photos/seed/oat3/1200/800'
     ],
-    price: '$190/night',
+    price: 'N190/night',
     guests: 2
   },
   {
@@ -40,7 +40,7 @@ const properties: Property[] = [
         'https://picsum.photos/seed/glass2/1200/800',
         'https://picsum.photos/seed/glass3/1200/800'
     ],
-    price: '$350/night',
+    price: 'N350/night',
     guests: 4
   },
   {
@@ -53,7 +53,7 @@ const properties: Property[] = [
         'https://picsum.photos/seed/villa2/1200/800',
         'https://picsum.photos/seed/villa3/1200/800'
     ],
-    price: '$420/night',
+    price: 'N420/night',
     guests: 6
   }
 ];

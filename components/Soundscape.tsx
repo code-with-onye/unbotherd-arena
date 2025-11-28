@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Volume2, VolumeX } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect, useRef } from "react";
+import { Volume2, VolumeX } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export const Soundscape: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -11,7 +11,9 @@ export const Soundscape: React.FC = () => {
   // Initialize Audio
   useEffect(() => {
     // Using a soft rain/nature loop
-    audioRef.current = new Audio('https://cdn.pixabay.com/audio/2022/05/27/audio_1808fbf07a.mp3');
+    audioRef.current = new Audio(
+      "https://cdn.pixabay.com/audio/2022/05/27/audio_1808fbf07a.mp3"
+    );
     audioRef.current.loop = true;
     audioRef.current.volume = 0;
 
@@ -36,19 +38,24 @@ export const Soundscape: React.FC = () => {
 
     if (!isPlaying) {
       // Start Playing
-      audioRef.current.play().catch((e) => console.warn("Audio autoplay blocked", e));
+      audioRef.current
+        .play()
+        .catch((e) => console.warn("Audio autoplay blocked", e));
       setIsPlaying(true);
 
       // Fade In
       fadeIntervalRef.current = window.setInterval(() => {
         if (audioRef.current && audioRef.current.volume < 0.3) {
           // Increase volume gradually
-          audioRef.current.volume = Math.min(0.3, audioRef.current.volume + 0.02);
+          audioRef.current.volume = Math.min(
+            0.3,
+            audioRef.current.volume + 0.02
+          );
         } else {
-          if (fadeIntervalRef.current) window.clearInterval(fadeIntervalRef.current);
+          if (fadeIntervalRef.current)
+            window.clearInterval(fadeIntervalRef.current);
         }
       }, 100);
-
     } else {
       // Fade Out then Pause
       setIsPlaying(false);
@@ -60,17 +67,18 @@ export const Soundscape: React.FC = () => {
         } else {
           // Stop completely
           if (audioRef.current) {
-             audioRef.current.pause();
-             audioRef.current.volume = 0;
+            audioRef.current.pause();
+            audioRef.current.volume = 0;
           }
-          if (fadeIntervalRef.current) window.clearInterval(fadeIntervalRef.current);
+          if (fadeIntervalRef.current)
+            window.clearInterval(fadeIntervalRef.current);
         }
       }, 100);
     }
   };
 
   return (
-    <motion.div 
+    <motion.div
       className="fixed bottom-8 right-8 z-50 flex items-center gap-3"
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
@@ -93,17 +101,19 @@ export const Soundscape: React.FC = () => {
         className={`
           relative w-12 h-12 flex items-center justify-center rounded-full 
           backdrop-blur-md border transition-all duration-500
-          ${isPlaying 
-            ? 'bg-terracotta/10 border-terracotta text-terracotta' 
-            : 'bg-white/50 border-soft-charcoal/20 text-soft-charcoal hover:bg-white'}
+          ${
+            isPlaying
+              ? "bg-terracotta/10 border-terracotta text-terracotta"
+              : "bg-white/50 border-soft-charcoal/20 text-soft-charcoal hover:bg-white"
+          }
         `}
       >
         {isPlaying ? (
-           <Volume2 size={20} strokeWidth={1.5} />
+          <Volume2 size={20} strokeWidth={1.5} />
         ) : (
-           <VolumeX size={20} strokeWidth={1.5} />
+          <VolumeX size={20} strokeWidth={1.5} />
         )}
-        
+
         {/* Pulse effect when playing */}
         {isPlaying && (
           <span className="absolute inset-0 rounded-full border border-terracotta animate-ping opacity-20" />
@@ -112,3 +122,5 @@ export const Soundscape: React.FC = () => {
     </motion.div>
   );
 };
+
+
